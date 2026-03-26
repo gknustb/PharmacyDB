@@ -1,0 +1,74 @@
+INSERT INTO PlanoSaude VALUES (23, 25.00, 'Bradesco');
+INSERT INTO PlanoSaude VALUES (12, 25.00, 'Porto Seguro');
+INSERT INTO PlanoSaude VALUES (7, 40.00, 'Unimed');
+
+
+INSERT INTO Pessoa VALUES ('59283746192', '2003-08-11', 'Breno Alves', 'kmabonee@gmail.com', '5511968203918', '26053060', 'Rua Presidente', 'Sao Paulo');
+INSERT INTO Pessoa VALUES ('95038172036', '2008-10-06', 'Victoria Helena', 'wpattillob@gmail.com', '5522910284927', '59283040', 'Avenida Flora', 'Rio das Ostras');
+INSERT INTO Pessoa VALUES ('53849102938', '1995-07-12', 'Laurie Cronchey', 'madamovich2@outlook.com', '5521958273810', '23817848', 'Rua Projeto', 'Niteroi');
+INSERT INTO Pessoa VALUES ('65748372819', '1975-03-17', 'Agnes Aikenhead', 'kkaplan3@hotmail.com', '5538948295827', '14827583', 'Rua Mestre', 'Pirapora');
+INSERT INTO Pessoa VALUES ('94857284793', '1984-01-30', 'Muhammad Adamovich', 'mdaughtry5@bing.com', '5512958273677', '89605938', 'Avenida Governador', 'Taubate');
+INSERT INTO Pessoa VALUES ('42958095623', '2000-11-04', 'Kalil Kaplan', 'follive9@yahoo.com', '5511958293847', '42758172', 'Rua Jardim', 'Osasco');
+INSERT INTO Pessoa VALUES ('59281248102', '1999-07-31', 'Ruth Kepler', 'rk500@gmail.com', '5511963274810', '16472859', 'Avenida Planal', 'Guarulhos');
+INSERT INTO Pessoa VALUES ('75038172636', '2003-10-21', 'Marcos Vinicius', 'mvini@gmail.com', '5522968984922', '89383041', 'Rua Mares Azuis', 'Rio das Ostras');
+
+
+INSERT INTO Cliente VALUES ('59283746192', 23, '2028-04-01');
+INSERT INTO Cliente VALUES ('95038172036', 12, '2032-11-01');
+INSERT INTO Cliente VALUES ('65748372819', 7, '2026-01-01');
+INSERT INTO Cliente VALUES ('75038172636', 23, '2031-09-01');
+
+
+INSERT INTO Dono VALUES ('59281248102');
+
+
+INSERT INTO Farmacia VALUES ('29583728000198', '59281248102', '12938742', 'Rua Flauta', 'Rio das Ostras', '5522955129983');
+
+
+INSERT INTO Funcionario VALUES ('53849102938', '29583728000198', 'Caixa', 1570.00);
+INSERT INTO Funcionario VALUES ('94857284793', '29583728000198', 'Farmaceutico', 4720.00);
+INSERT INTO Funcionario VALUES ('42958095623', NULL, 'Contador', 17920.00);
+
+
+INSERT INTO Venda VALUES (59289123, '59283746192', '29583728000198', 25.00, 'Credito', '2025-08-11', 60.07);
+INSERT INTO Venda VALUES (75827361, '59283746192', '29583728000198', 25.00, 'Credito', '2025-08-14', 55.70);
+INSERT INTO Venda VALUES (79583910, '95038172036', '29583728000198', 25.00, 'Debito', '2025-10-07', 12.50);
+INSERT INTO Venda VALUES (65833928, '65748372819', '29583728000198', 40.00, 'PIX', '2025-09-28', 432.00);
+
+
+INSERT INTO Produto VALUES (52312, 'Paracetamol 500mg', 'Neo Quimica', 'Medicamento', 8.90);
+INSERT INTO Produto VALUES (63412, 'Dipirona Sodica 1g', 'Medley', 'Medicamento', 7.50);
+INSERT INTO Produto VALUES (79958, 'Amoxicilina 500mg', 'EMS', 'Medicamento', 32.80);
+INSERT INTO Produto VALUES (64555, 'Protetor Solar FPS 50', 'Nivea', 'Cosmetico', 49.90);
+INSERT INTO Produto VALUES (98862, 'Sabonete Líquido', 'Dove', 'Higiene', 11.90);
+INSERT INTO Produto VALUES (91213, 'Termometro Digital', 'Multilaser', 'Equipamento', 20.90);
+
+
+INSERT INTO Fornecedor VALUES ('53928304000144', 'Laboratorio Saude', 'Sao Paulo', 'contato@saudeplena.com.br');
+INSERT INTO Fornecedor VALUES ('15869381000176', 'Quimica Vital', 'Rio de Janeiro', 'vitalbrasil@quimica.com.br');
+INSERT INTO Fornecedor VALUES ('87577953000142', 'Farma Mais', 'Curitiba', 'vendas@farmamais.com.br');
+
+
+INSERT INTO Forne_Prod VALUES (52312, '53928304000144', 7.00);
+INSERT INTO Forne_Prod VALUES (52312, '15869381000176', 6.80);
+INSERT INTO Forne_Prod VALUES (79958, '53928304000144', 22.00);
+INSERT INTO Forne_Prod VALUES (98862, '15869381000176', 9.50);
+INSERT INTO Forne_Prod VALUES (91213, '87577953000142', 16.70);
+INSERT INTO Forne_Prod VALUES (63412, '87577953000142', 6.50);
+
+
+INSERT INTO Venda_Prod VALUES (59289123, 52312, 2);
+INSERT INTO Venda_Prod VALUES (75827361, 79958, 1);
+INSERT INTO Venda_Prod VALUES (75827361, 91213, 1);
+INSERT INTO Venda_Prod VALUES (79583910, 98862, 1);
+INSERT INTO Venda_Prod VALUES (65833928, 63412, 2);
+INSERT INTO Venda_Prod VALUES (65833928, 64555, 3);
+
+
+INSERT INTO Lote VALUES (249, 52312, '29583728000198', '2027-12-01', 54, '2024-01-01');
+INSERT INTO Lote VALUES (194, 52312, '29583728000198', '2027-11-01', 12, '2024-02-01');
+INSERT INTO Lote VALUES (523, 79958, '29583728000198', '2026-07-01', 60, '2023-11-01');
+INSERT INTO Lote VALUES (123, 91213, '29583728000198', NULL, 25, '2023-10-01');
+INSERT INTO Lote VALUES (748, 98862, '29583728000198', '2030-12-01', 13, '2025-05-01');
+INSERT INTO Lote VALUES (778, 63412, '29583728000198', '2028-10-01', 26, '2024-07-01');
+INSERT INTO Lote VALUES (442, 64555, '29583728000198', '2026-01-01', 19, '2025-08-01');
