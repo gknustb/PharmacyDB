@@ -13,12 +13,12 @@ DROP TABLE IF EXISTS Pessoa;
 
 
 CREATE TABLE Pessoa(
-    CPF CHAR(11), --CPF(brazilian personal ID number) should have 11 characters
+    CPF CHAR(11),
     DataNascimento DATE NOT NULL,
     Nome VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) NOT NULL UNIQUE CHECK (Email LIKE '%@%'), --check for proper email scructure
+    Email VARCHAR(100) NOT NULL UNIQUE CHECK (Email LIKE '%@%'),
     Telefone VARCHAR(20) NOT NULL UNIQUE,
-    CEP CHAR(8) NOT NULL, --brazilian postal code
+    CEP CHAR(8) NOT NULL,
     Rua VARCHAR(100) NOT NULL,
     Cidade VARCHAR(50) NOT NULL,
     PRIMARY KEY(CPF)
@@ -58,7 +58,7 @@ CREATE TABLE Cliente(
     FOREIGN KEY(CodPlano) REFERENCES PlanoSaude(CodPlano)
 );
 CREATE TABLE Farmacia(
-    CNPJ CHAR(14), --brazilian business ID number, should have 14 character
+    CNPJ CHAR(14),
     CPF CHAR(11) NOT NULL,
     CEP CHAR(8) NOT NULL,
     Rua VARCHAR(100) NOT NULL,
