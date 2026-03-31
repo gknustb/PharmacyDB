@@ -13,6 +13,7 @@ undo/
 .classpath
 .project
 .settings/
+.env
 
 *.log
 .DS_Store
